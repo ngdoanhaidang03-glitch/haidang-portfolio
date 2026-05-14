@@ -100,6 +100,21 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+/* Thanh cuộn ngang tùy chỉnh cho Short-form */
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 6px; /* Độ mỏng của thanh kéo */
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05); /* Màu nền mờ mờ */
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #8A2BE2; /* Màu tím neon hợp với Theme */
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #B026FF; /* Sáng lên khi di chuột vào */
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-neonpurple selection:text-white">
@@ -126,16 +141,15 @@
         <div class="max-w-7xl mx-auto w-full flex flex-col-reverse md:flex-row items-center gap-12 z-10">
             <!-- Text Content -->
             <div class="flex-1 space-y-8" data-aos="fade-up" data-aos-duration="1000">
-                <h1 class="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1]">
-                    Mình là Hải Đăng <br>
-                    <span class="text-gradient">Video Editor.</span>
-                </h1>
-                
-                <div class="space-y-4 text-lg md:text-xl text-silvergray max-w-2xl font-light leading-relaxed">
-                    <p>Mình không làm ra những video ngập tràn kỹ xảo thừa thãi.</p>
-                    <p>Mình giải quyết bài toán truyền thông bằng những khung hình có nhịp độ chặt chẽ và bám sát mục tiêu thương mại.</p>
-                    <p>Ngoài ra, mình còn áp dụng AI vào quy trình chỉnh sửa video để tối ưu hóa thời gian hậu kỳ.</p>
-                </div>
+    <h1 class="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1]">
+        Em là Hải Đăng<br>
+        <span class="text-gradient">Video Editor.</span>
+    </h1>
+    
+    <div class="space-y-5 text-base md:text-lg text-silvergray max-w-2xl font-light leading-relaxed">
+        <p>Với nền tảng xuất thân từ <strong class="text-white font-medium">chuyên ngành Thiết kế Đồ họa</strong>. Từng đảm nhiệm vị trí Biên tập & Chỉnh sửa video cho doanh nghiệp B2B. Em giải quyết bài toán video bằng những khung hình có nhịp độ <span class="italic">(pacing)</span> chặt chẽ, tư duy thị giác sắc bén và luôn bám sát mục tiêu thương mại của nhãn hàng.</p>
+        <p>Thế mạnh của em nằm ở sự kết hợp giữa hệ sinh thái tiêu chuẩn (<strong class="text-white font-medium">Premiere Pro, After Effects, Capcut</strong>) và áp dụng Trí tuệ Nhân tạo (AI) vào quy trình chỉnh sửa video để tối ưu hóa thời gian hậu kỳ.</p>
+    </div>
 
                 <div class="pt-4">
                     <a href="#san-pham" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-neonpurple to-cyberviolet text-white font-medium hover:scale-105 transition-transform duration-300 shadow-[0_0_20px_rgba(138,43,226,0.4)]">
@@ -168,57 +182,77 @@
                 <div class="flex items-end justify-center mb-8" data-aos="fade-up">
     <h3 class="text-2xl font-semibold">Short-form Content</h3>
 </div>
-                
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-                    <!-- Item 1 -->
-                    <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="0">
-    <div class="relative aspect-[9/16] rounded-3xl overflow-hidden glass-panel mb-3">
-        <iframe src="https://player.vimeo.com/video/1190907321?autoplay=1&mute=1" 
-                class="absolute top-0 left-0 w-full h-full" 
-                frameborder="0" 
-                allow="autoplay; fullscreen; encrypted-media" 
-                allowfullscreen>
-        </iframe>
-    </div>
-    <p class="text-silvergray text-sm md:text-base font-medium px-2 text-center">ITVC</p>
+                <!-- Item 1 -->
+                <div class="relative w-full">
+<div class="flex overflow-x-auto gap-4 md:gap-6 pb-6 px-4 md:px-0 snap-x snap-mandatory custom-scrollbar">
+
+        <div class="group cursor-pointer flex-none w-[70vw] sm:w-[45vw] md:w-[260px] snap-center lg:snap-start" data-aos="fade-up" data-aos-delay="0">
+<div class="relative aspect-[9/16] rounded-3xl overflow-hidden glass-panel mb-3">
+    <iframe src="https://player.vimeo.com/video/1190907321?autoplay=1&mute=1" 
+            class="absolute top-0 left-0 w-full h-full" 
+            frameborder="0" 
+            allow="autoplay; fullscreen; encrypted-media" 
+            allowfullscreen>
+    </iframe>
 </div>
-                    <!-- Item 2 -->
-                    <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
-    <div class="relative aspect-[9/16] rounded-3xl overflow-hidden glass-panel mb-3">
-        <iframe src="https://www.youtube.com/embed/WZ3us6fYIwE?autoplay=1&mute=1" 
-                class="absolute top-0 left-0 w-full h-full" 
-                frameborder="0" 
-                allow="autoplay; fullscreen; encrypted-media" 
-                allowfullscreen>
-        </iframe>
-    </div>
-    <p class="text-silvergray text-sm md:text-base font-medium px-2 text-center">Map Animation</p>
+<p class="text-silvergray text-sm md:text-base font-medium px-2 text-center">ITVC</p>
 </div>
-                    <!-- Item 3 -->
-                 <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="200">
-    <div class="relative aspect-[9/16] rounded-3xl overflow-hidden glass-panel mb-3">
-        <iframe src="https://player.vimeo.com/video/1190848667" 
-                class="absolute top-0 left-0 w-full h-full" 
-                frameborder="0" 
-                allow="autoplay; fullscreen; encrypted-media" 
-                allowfullscreen>
-        </iframe>
-    </div>
-    <p class="text-silvergray text-sm md:text-base font-medium px-2 text-center">Marketing</p>
+                <!-- Item 2 -->
+        <div class="group cursor-pointer flex-none w-[70vw] sm:w-[45vw] md:w-[260px] snap-center lg:snap-start" data-aos="fade-up" data-aos-delay="100">
+<div class="relative aspect-[9/16] rounded-3xl overflow-hidden glass-panel mb-3">
+    <iframe src="https://www.youtube.com/embed/WZ3us6fYIwE?autoplay=1&mute=1" 
+            class="absolute top-0 left-0 w-full h-full" 
+            frameborder="0" 
+            allow="autoplay; fullscreen; encrypted-media" 
+            allowfullscreen>
+    </iframe>
 </div>
-                    <!-- Item 4 -->
-                    <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="300">
-    <div class="relative aspect-[9/16] rounded-3xl overflow-hidden glass-panel mb-3">
-        <iframe src="https://player.vimeo.com/video/1190857565?autoplay=1&mute=1" 
-                class="absolute top-0 left-0 w-full h-full" 
-                frameborder="0" 
-                allow="autoplay; fullscreen; encrypted-media" 
-                allowfullscreen>
-        </iframe>
-    </div>
-    <p class="text-silvergray text-sm md:text-base font-medium px-2 text-center">Speedramp</p>
+<p class="text-silvergray text-sm md:text-base font-medium px-2 text-center">Map Animation</p>
 </div>
-                </div>
+        <!-- Item 3 -->
+        <div class="group cursor-pointer flex-none w-[70vw] sm:w-[45vw] md:w-[260px] snap-center lg:snap-start" data-aos="fade-up" data-aos-delay="200">
+<div class="relative aspect-[9/16] rounded-3xl overflow-hidden glass-panel mb-3">
+    <iframe src="https://player.vimeo.com/video/1190848667" 
+            class="absolute top-0 left-0 w-full h-full" 
+            frameborder="0" 
+            allow="autoplay; fullscreen; encrypted-media" 
+            allowfullscreen>
+    </iframe>
+</div>
+<p class="text-silvergray text-sm md:text-base font-medium px-2 text-center">Marketing</p>
+</div>
+        <!-- Item 4 -->
+        <div class="group cursor-pointer flex-none w-[70vw] sm:w-[45vw] md:w-[260px] snap-center lg:snap-start" data-aos="fade-up" data-aos-delay="300">
+<div class="relative aspect-[9/16] rounded-3xl overflow-hidden glass-panel mb-3">
+    <iframe src="https://player.vimeo.com/video/1190857565?autoplay=1&mute=1" 
+            class="absolute top-0 left-0 w-full h-full" 
+            frameborder="0" 
+            allow="autoplay; fullscreen; encrypted-media" 
+            allowfullscreen>
+    </iframe>
+</div>
+<p class="text-silvergray text-sm md:text-base font-medium px-2 text-center">Speedramp</p>
+</div>
+        <!-- Item 5 -->
+        <div class="group cursor-pointer flex-none w-[70vw] sm:w-[45vw] md:w-[260px] snap-center lg:snap-start" data-aos="fade-up" data-aos-delay="400">
+<div class="relative aspect-[9/16] rounded-3xl overflow-hidden glass-panel mb-3">
+    <iframe src="https://player.vimeo.com/video/1192102217?" 
+            class="absolute top-0 left-0 w-full h-full" 
+            frameborder="0" 
+            allow="autoplay; fullscreen; encrypted-media" 
+            allowfullscreen>
+    </iframe>
+</div>
+<p class="text-silvergray text-sm md:text-base font-medium px-2 text-center">Tin Tức</p>
+</div>
+
+</div>
+
+<div class="flex items-center justify-center gap-2 mt-2 text-silvergray/50 animate-pulse md:hidden" data-aos="fade-in" data-aos-delay="500">
+    <span class="text-xs tracking-wider">Vuốt để xem thêm</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+</div>
+</div>
             </div>
 
             <!-- 2.2 Long-form Video (Stacked Cards) -->
